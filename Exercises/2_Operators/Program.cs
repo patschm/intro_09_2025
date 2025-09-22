@@ -34,6 +34,7 @@ internal class Program
         // TODO 2d: decrease b by 1 and display the result.
         Console.WriteLine(--b);
         int c = Random.Shared.Next(1, 3);
+        //int rem = c % 2;
         // TODO 3a: Declare a variable that stores whether c equals 2.
         bool ok = c == 2;
         Console.WriteLine(ok);
