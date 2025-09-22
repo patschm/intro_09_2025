@@ -15,11 +15,21 @@
             //}
 
             char kar = 'a'; // Literal
-            string name = "Patrick";
-            Console.WriteLine(name);
+            // Scope. Bepaalt levensduur variablen
+            {
+                string name2 = "Patrick";
+                Console.WriteLine(name2);
+            }
+            //Console.WriteLine(name);
             Console.WriteLine("Geef uw naam");
-            name = Console.ReadLine();
+            string  name = Console.ReadLine();
             Console.WriteLine(name);
+
+            bool isWaar = true;
+
+            const double pi = 3.14;
+
+            //pi = 6.28; // Mag niet.
         }
     }
 }
