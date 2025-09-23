@@ -26,5 +26,12 @@ internal class Program
         {
             Console.WriteLine(val);
         }
+
+        Dictionary<string, int> lookup = new Dictionary<string, int>();
+        lookup.Add("een", 1);
+        lookup.Add("twee", 2);
+        lookup.Add("drie", 3);
+
+        Console.WriteLine(lookup["twee"]);
     }
 }

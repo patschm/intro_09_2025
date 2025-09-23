@@ -127,7 +127,7 @@ internal class Program
         List<float> floats = new List<float>();
         for (int offset = 0; offset < 100; offset++)
         {
-            floats.Add(Randomizer.RandomInt());
+            floats.Add(Randomizer.RandomFloat());
         }
         foreach (float item in floats)
         {
