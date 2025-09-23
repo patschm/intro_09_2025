@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loopings_for", "Loopings_for\Loopings_for.csproj", "{EAE382FA-2FAC-48BF-9CF7-F6C53266F33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DieAndereLoops", "DieAndereLoops\DieAndereLoops.csproj", "{6A167993-6610-491E-9E42-7E10CC68809C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EAE382FA-2FAC-48BF-9CF7-F6C53266F33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE382FA-2FAC-48BF-9CF7-F6C53266F33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE382FA-2FAC-48BF-9CF7-F6C53266F33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A167993-6610-491E-9E42-7E10CC68809C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A167993-6610-491E-9E42-7E10CC68809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A167993-6610-491E-9E42-7E10CC68809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A167993-6610-491E-9E42-7E10CC68809C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
