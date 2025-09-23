@@ -7,10 +7,11 @@ internal class Program
     static void Main(string[] args)
     {
         // Big bang
+        Lamp led = new Lamp();
+        led.color = ConsoleColor.Red;
         // lader1 is een object
-        Oplader lader1 = new Oplader();
-        lader1.led = new Lamp();
-        lader1.led.color = ConsoleColor.Red;
+        Oplader lader1 = new Oplader(led);
+        
         lader1.ingansspanning = 230;
         lader1.uitgangsspanning = 24;
         lader1.weerstand = 1000;
@@ -36,7 +37,16 @@ class Oplader
     public int vermogen;
     public int weerstand;
     public bool isAangesloten;
-    public Lamp led;
+    private Lamp _led;
+
+
+    // Constructor.
+    // Hiermee geef ik fields een initiele waarde
+    public Oplader(Lamp led)
+    {
+        //this.led = led;
+        _led = led;
+    }
 
     // Methods. Hierin definieer ik gedrag
     // Kan ook public of private zijn.
@@ -58,21 +68,21 @@ class Oplader
     // 
     public void Start()
     {
-        led.Aan();
+        _led.Aan();
         Console.WriteLine("Oplader begint nu met laden");
         isAangesloten = true;
         Laden();
         Bromt();
         Verwarm();
-        
+
     }
     public void Stop()
     {
         Console.WriteLine("De oplader is klaar");
         isAangesloten = false;
-        led.Uit();
+        _led.Uit();
     }
-    
+
 }
 
 class Lamp

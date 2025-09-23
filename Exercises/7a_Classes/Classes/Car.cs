@@ -15,8 +15,8 @@
 
 class Car
 {
-    public string? brand;
-    public string? model;
+    public string brand;
+    public string model;
     public int productionYear;
     private int currentSpeed;
     private  int MaxSpeed = 250;
