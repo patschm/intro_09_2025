@@ -9,7 +9,7 @@ internal class Program
         ShowNumbers(nummers);
         BubbleSort(nummers);
         ShowNumbers(nummers);
-
+        Console.ReadLine();
     }
 
     static void ShowNumbers(int[] nummers)
