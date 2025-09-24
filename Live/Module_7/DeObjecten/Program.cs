@@ -8,15 +8,15 @@ internal class Program
     {
         // Big bang
         Lamp led = new Lamp();
-        led.color = ConsoleColor.Red;
+        led.Color = ConsoleColor.Red;
         // lader1 is een object
-        Oplader lader1 = new Oplader(led);
-        
-        lader1.ingansspanning = 230;
-        lader1.uitgangsspanning = 24;
-        lader1.weerstand = 1000;
-        lader1.vermogen = 65;
-        lader1.isAangesloten = false;
+        Oplader lader1 = new Oplader(led)
+        { // Property initializers
+            Ingangsspanning = 240, 
+            Uitgansspanning = 24,
+            Weerstand = 1000
+        };
+       // lader1.Vermogen = 600;
 
         lader1.Start();
 
@@ -32,12 +32,54 @@ class Oplader
 {
     // Fields. Hierin slaan we eigenschappen op
     // Kunnen public of private zijn
-    public int ingansspanning;
-    public int uitgangsspanning;
-    public int vermogen;
-    public int weerstand;
-    public bool isAangesloten;
+    //private int ingansspanning = 220;
+    //private int uitgangsspanning;
+    private int vermogen = 200;
+    //private int weerstand;
+    private bool isAangesloten = false;
     private Lamp _led;
+
+    // Gecontroleerde toegang. Ofwel encapsulation
+    // Properties. Het cosmeyische jasje om de Set en Get methodes verderop
+    public int Vermogen
+    {
+        get
+        {
+            return vermogen;
+        }
+        set
+        {
+            if (value >= 0 && value <= 1000)
+            {
+                vermogen = value;
+            }
+        }
+    }
+
+    // Auto generating property. Genereert zijn eigen private field.
+    public int Ingangsspanning { get; set; } = 220;
+    public int Uitgansspanning { get; set; }
+    public int Weerstand { get; set; } = 500;
+    public bool IsAangesloten
+    {
+        get { return isAangesloten; }
+        private set { isAangesloten = value; }
+    }
+
+
+
+    // Niet gebruikelijk in .NET, maar opzich wel correct.
+    //public void SetVermogen(int amount)
+    //{
+    //    if (amount >= 0 && amount <= 1000)
+    //    {
+    //        vermogen = amount;
+    //    }
+    //}
+    //public int GetVermogen()
+    //{
+    //    return vermogen;
+    //}
 
 
     // Constructor.
@@ -57,7 +99,7 @@ class Oplader
 
     private void Laden()
     {
-        Console.WriteLine($"Begint te laden met een maximaal vermogen van {vermogen}");
+        Console.WriteLine($"Begint te laden met een maximaal vermogen van {Vermogen}");
     }
 
     private void Bromt()
@@ -69,8 +111,8 @@ class Oplader
     public void Start()
     {
         _led.Aan();
-        Console.WriteLine("Oplader begint nu met laden");
-        isAangesloten = true;
+        Console.WriteLine($"Oplader ({Ingangsspanning}Volt) begint nu met laden");
+        IsAangesloten = true;
         Laden();
         Bromt();
         Verwarm();
@@ -79,7 +121,7 @@ class Oplader
     public void Stop()
     {
         Console.WriteLine("De oplader is klaar");
-        isAangesloten = false;
+        IsAangesloten = false;
         _led.Uit();
     }
 
@@ -87,11 +129,11 @@ class Oplader
 
 class Lamp
 {
-    public ConsoleColor color;
+    public ConsoleColor Color { get; set; }
 
     public void Aan()
     {
-        Console.BackgroundColor = color;
+        Console.BackgroundColor = Color;
         Console.WriteLine("Het lampje brandt");
     }
 
