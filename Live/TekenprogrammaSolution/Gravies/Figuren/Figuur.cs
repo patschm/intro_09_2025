@@ -10,6 +10,7 @@ namespace TekenProgramma
     public class Figuur
     {
         public Positie Positie { get; set; }
+        public Color Kleur { get; set; }
 
         public virtual void Teken(Graphics g)
         {

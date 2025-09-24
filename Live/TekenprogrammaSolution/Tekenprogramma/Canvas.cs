@@ -2,37 +2,17 @@
 
 internal class Canvas
 {
-    private List<Rechthoek> rechthoeken = new List<Rechthoek>();
-    private List<Driehoek> driehoeken = new List<Driehoek>();
-    private List<Cirkel> cirkels = new List<Cirkel>();
-
-    public void VoegToe(Rechthoek rechthoek)
+    private List<Figuur> figuren = new List<Figuur>();
+    
+    public void VoegToe(Figuur figuur)
     {
-        rechthoeken.Add(rechthoek);
-        Refresh();
-    }
-    public void VoegToe(Driehoek driehoek)
-    {
-        driehoeken.Add(driehoek);   
-        Refresh();
-    }
-    public void VoegToe(Cirkel cirkel)
-    {
-        cirkels.Add(cirkel);    
+        figuren.Add(figuur);
         Refresh();
     }
     public void Refresh()
     {
         Console.Clear();
-        foreach (Driehoek figuur in driehoeken)
-        {
-            figuur.Teken();
-        }
-        foreach (Rechthoek figuur in rechthoeken)
-        {
-            figuur.Teken();
-        }
-        foreach (Cirkel  figuur in cirkels)
+        foreach (Figuur figuur in figuren)
         {
             figuur.Teken();
         }

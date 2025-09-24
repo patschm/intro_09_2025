@@ -18,6 +18,7 @@ namespace Gravies
             Cirkel c = new Cirkel();
             c.Positie = new Positie { X = (int)hX.Value, Y = (int)hY.Value };
             c.Straal = (int)hRadius.Value;
+            c.Kleur = colorDialog1.Color;
             return c;
         }
         public CirkelDlg()
@@ -25,9 +26,9 @@ namespace Gravies
             InitializeComponent();
         }
 
-         private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
-       protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -44,126 +45,138 @@ namespace Gravies
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.hX = new System.Windows.Forms.NumericUpDown();
-            this.hY = new System.Windows.Forms.NumericUpDown();
-            this.hRadius = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.hX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hRadius)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            hX = new NumericUpDown();
+            hY = new NumericUpDown();
+            hRadius = new NumericUpDown();
+            button1 = new Button();
+            button2 = new Button();
+            colorDialog1 = new ColorDialog();
+            button3 = new Button();
+            button4 = new Button();
+            ((ISupportInitialize)hX).BeginInit();
+            ((ISupportInitialize)hY).BeginInit();
+            ((ISupportInitialize)hRadius).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Straal";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F);
+            label1.Location = new Point(12, 114);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Straal";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "X";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F);
+            label2.Location = new Point(12, 13);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 30);
+            label2.TabIndex = 1;
+            label2.Text = "X";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 30);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Y";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F);
+            label3.Location = new Point(12, 55);
+            label3.Name = "label3";
+            label3.Size = new Size(25, 30);
+            label3.TabIndex = 2;
+            label3.Text = "Y";
             // 
             // hX
             // 
-            this.hX.Location = new System.Drawing.Point(102, 19);
-            this.hX.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hX.Name = "hX";
-            this.hX.Size = new System.Drawing.Size(120, 23);
-            this.hX.TabIndex = 3;
+            hX.Location = new Point(102, 19);
+            hX.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hX.Name = "hX";
+            hX.Size = new Size(120, 23);
+            hX.TabIndex = 3;
             // 
             // hY
             // 
-            this.hY.Location = new System.Drawing.Point(102, 65);
-            this.hY.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hY.Name = "hY";
-            this.hY.Size = new System.Drawing.Size(120, 23);
-            this.hY.TabIndex = 4;
+            hY.Location = new Point(102, 65);
+            hY.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hY.Name = "hY";
+            hY.Size = new Size(120, 23);
+            hY.TabIndex = 4;
             // 
             // hRadius
             // 
-            this.hRadius.Location = new System.Drawing.Point(102, 124);
-            this.hRadius.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hRadius.Name = "hRadius";
-            this.hRadius.Size = new System.Drawing.Size(120, 23);
-            this.hRadius.TabIndex = 5;
+            hRadius.Location = new Point(102, 124);
+            hRadius.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hRadius.Name = "hRadius";
+            hRadius.Size = new Size(120, 23);
+            hRadius.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(352, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.DialogResult = DialogResult.Cancel;
+            button1.Location = new Point(352, 223);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 6;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(271, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Create";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.OK;
+            button2.Location = new Point(271, 223);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 7;
+            button2.Text = "Create";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(284, 87);
+            button3.Name = "button3";
+            button3.Size = new Size(8, 8);
+            button3.TabIndex = 8;
+            button3.Text = "Kleur";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(270, 90);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 9;
+            button4.Text = "Kleur";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // CirkelDlg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 258);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.hRadius);
-            this.Controls.Add(this.hY);
-            this.Controls.Add(this.hX);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "CirkelDlg";
-            this.Text = "CirkelDlg";
-            ((System.ComponentModel.ISupportInitialize)(this.hX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hRadius)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(439, 258);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(hRadius);
+            Controls.Add(hY);
+            Controls.Add(hX);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "CirkelDlg";
+            Text = "CirkelDlg";
+            Load += CirkelDlg_Load;
+            ((ISupportInitialize)hX).EndInit();
+            ((ISupportInitialize)hY).EndInit();
+            ((ISupportInitialize)hRadius).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -176,5 +189,22 @@ namespace Gravies
         private System.Windows.Forms.NumericUpDown hRadius;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+
+        private void CirkelDlg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == colorDialog1.ShowDialog())
+            {
+                //_kleur = colorDialog1.Color;
+            }
+        }
+
+        private ColorDialog colorDialog1;
+        private Button button3;
+        private Button button4;
     }
 }

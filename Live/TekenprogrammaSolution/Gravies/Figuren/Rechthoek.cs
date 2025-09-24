@@ -14,7 +14,7 @@ namespace TekenProgramma
 
         public override void Teken(Graphics g)
         {
-            g.DrawRectangle(Pens.Black, Positie.X, Positie.Y, Breedte, Hoogte);
+            g.DrawRectangle(new Pen(Kleur, 4), Positie.X, Positie.Y, Breedte, Hoogte);
         }
     }
 }

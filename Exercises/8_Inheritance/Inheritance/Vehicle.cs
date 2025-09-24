@@ -14,7 +14,7 @@ internal class Vehicle
         }
         set
         {
-            if (currentSpeed >= MAX_SPEED && currentSpeed >= 0)
+            if (value <= MAX_SPEED && value >= 0)
             {
                 currentSpeed = value;
             }
@@ -31,16 +31,16 @@ internal class Vehicle
     }
 
     // TODO 4: Make the methods below overridable
-    public void Throttle()
+    public virtual void Throttle()
     {
         CurrentSpeed++;
     }
-    public void Brake()
+    public virtual void Brake()
     {
         CurrentSpeed--;
     }
-    public void DisplayStatus()
+    public virtual void DisplayStatus()
     {
-        Console.WriteLine($"Car drives with a speed of {CurrentSpeed}km/h");
+        Console.WriteLine($"Vehicle drives with a speed of {CurrentSpeed}km/h");
     }
 }

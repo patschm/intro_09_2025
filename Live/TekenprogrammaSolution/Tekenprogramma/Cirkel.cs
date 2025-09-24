@@ -1,9 +1,9 @@
 ﻿
 namespace Tekenprogramma;
 
-internal class Cirkel
+internal class Cirkel : Figuur
 {
-    public Position Location { get; set; } =  new Position { X = 0, Y = 0 };
+    
     private int _straal;
 
     public int Straal
@@ -18,7 +18,7 @@ internal class Cirkel
 
     // int Straal { get; set; }
 
-    public void Teken()
+    public override void Teken()
     {
         Console.WriteLine($"Cirkel op positie {Location.Show()} met straal {Straal}");
     }

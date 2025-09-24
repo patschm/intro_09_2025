@@ -13,7 +13,8 @@ namespace TekenProgramma
 
         public override void Teken(Graphics g)
         {
-            g.DrawArc(Pens.Black, Positie.X, Positie.Y, Straal, Straal, 0, 360);
+
+            g.DrawArc(new Pen(Kleur, 4), Positie.X, Positie.Y, Straal, Straal, 0, 360);
         }
     }
 }

@@ -22,6 +22,8 @@ namespace Gravies
         private Label label2;
         private Label label1;
         private NumericUpDown hHoogte;
+        private ColorDialog colorDialog1;
+        private Button button3;
         private Label label4;
 
         public Figuur Generate()
@@ -30,6 +32,7 @@ namespace Gravies
             c.Positie = new Positie { X = (int)hX.Value, Y = (int)hY.Value };
             c.Hoogte = (int)hHoogte.Value;
             c.Breedte = (int)hBreedte.Value;
+            c.Kleur = colorDialog1.Color;
             return c;
         }
         public RectangleDlg()
@@ -39,151 +42,152 @@ namespace Gravies
 
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.hBreedte = new System.Windows.Forms.NumericUpDown();
-            this.hY = new System.Windows.Forms.NumericUpDown();
-            this.hX = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.hHoogte = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.hBreedte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hHoogte)).BeginInit();
-            this.SuspendLayout();
+            button2 = new Button();
+            button1 = new Button();
+            hBreedte = new NumericUpDown();
+            hY = new NumericUpDown();
+            hX = new NumericUpDown();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            hHoogte = new NumericUpDown();
+            label4 = new Label();
+            colorDialog1 = new ColorDialog();
+            button3 = new Button();
+            ((ISupportInitialize)hBreedte).BeginInit();
+            ((ISupportInitialize)hY).BeginInit();
+            ((ISupportInitialize)hX).BeginInit();
+            ((ISupportInitialize)hHoogte).BeginInit();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(268, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Create";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.OK;
+            button2.Location = new Point(268, 216);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 15;
+            button2.Text = "Create";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(349, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.DialogResult = DialogResult.Cancel;
+            button1.Location = new Point(349, 216);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 14;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = true;
             // 
             // hBreedte
             // 
-            this.hBreedte.Location = new System.Drawing.Point(99, 117);
-            this.hBreedte.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hBreedte.Name = "hBreedte";
-            this.hBreedte.Size = new System.Drawing.Size(120, 23);
-            this.hBreedte.TabIndex = 13;
+            hBreedte.Location = new Point(99, 117);
+            hBreedte.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hBreedte.Name = "hBreedte";
+            hBreedte.Size = new Size(120, 23);
+            hBreedte.TabIndex = 13;
             // 
             // hY
             // 
-            this.hY.Location = new System.Drawing.Point(99, 58);
-            this.hY.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hY.Name = "hY";
-            this.hY.Size = new System.Drawing.Size(120, 23);
-            this.hY.TabIndex = 12;
+            hY.Location = new Point(99, 58);
+            hY.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hY.Name = "hY";
+            hY.Size = new Size(120, 23);
+            hY.TabIndex = 12;
             // 
             // hX
             // 
-            this.hX.Location = new System.Drawing.Point(99, 12);
-            this.hX.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hX.Name = "hX";
-            this.hX.Size = new System.Drawing.Size(120, 23);
-            this.hX.TabIndex = 11;
+            hX.Location = new Point(99, 12);
+            hX.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hX.Name = "hX";
+            hX.Size = new Size(120, 23);
+            hX.TabIndex = 11;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(9, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 30);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Y";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F);
+            label3.Location = new Point(9, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(25, 30);
+            label3.TabIndex = 10;
+            label3.Text = "Y";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(9, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 30);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "X";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F);
+            label2.Location = new Point(9, 6);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 30);
+            label2.TabIndex = 9;
+            label2.Text = "X";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(9, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 30);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Breedte";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F);
+            label1.Location = new Point(9, 107);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 30);
+            label1.TabIndex = 8;
+            label1.Text = "Breedte";
             // 
             // hHoogte
             // 
-            this.hHoogte.Location = new System.Drawing.Point(99, 156);
-            this.hHoogte.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.hHoogte.Name = "hHoogte";
-            this.hHoogte.Size = new System.Drawing.Size(120, 23);
-            this.hHoogte.TabIndex = 17;
+            hHoogte.Location = new Point(99, 156);
+            hHoogte.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            hHoogte.Name = "hHoogte";
+            hHoogte.Size = new Size(120, 23);
+            hHoogte.TabIndex = 17;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(9, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 30);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Hoogte";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15.75F);
+            label4.Location = new Point(9, 146);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 30);
+            label4.TabIndex = 16;
+            label4.Text = "Hoogte";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(315, 67);
+            button3.Name = "button3";
+            button3.Size = new Size(78, 25);
+            button3.TabIndex = 18;
+            button3.Text = "Kleur";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // RectangleDlg
             // 
-            this.ClientSize = new System.Drawing.Size(450, 254);
-            this.Controls.Add(this.hHoogte);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.hBreedte);
-            this.Controls.Add(this.hY);
-            this.Controls.Add(this.hX);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "RectangleDlg";
-            ((System.ComponentModel.ISupportInitialize)(this.hBreedte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hHoogte)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(450, 254);
+            Controls.Add(button3);
+            Controls.Add(hHoogte);
+            Controls.Add(label4);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(hBreedte);
+            Controls.Add(hY);
+            Controls.Add(hX);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "RectangleDlg";
+            ((ISupportInitialize)hBreedte).EndInit();
+            ((ISupportInitialize)hY).EndInit();
+            ((ISupportInitialize)hX).EndInit();
+            ((ISupportInitialize)hHoogte).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
         }
     }
 }

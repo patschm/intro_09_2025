@@ -1,37 +1,24 @@
 ﻿namespace Inheritance;
 
 // TODO 2a: Inherit from Vehicle and remove redundant code.
-internal class Bicycle
+internal class Bicycle : Vehicle
 {
-    private readonly int MAX_SPEED = 50;
-    private int currentSpeed;
-
     public int NumberOfGears { get; set; } = 10;
-    public int CurrentSpeed
+
+    public Bicycle(): base(50)
     {
-        get
-        {
-            return currentSpeed;
-        }
-        set
-        {
-            if (currentSpeed >= MAX_SPEED && currentSpeed >= 0)
-            {
-                currentSpeed = value;
-            }
-        }
+        
     }
-    
     // TODO 4a: Override the methods below where necessary.
-    public void Throttle()
+    public override void Throttle()
     {
         CurrentSpeed++;
     }
-    public void Brake()
+    public override void Brake()
     {
         CurrentSpeed--;
     }
-    public void DisplayStatus()
+    public override void DisplayStatus()
     {
         Console.WriteLine($"The bicycle with {NumberOfGears} gears rides with a speed of {CurrentSpeed}km/h");
     }
