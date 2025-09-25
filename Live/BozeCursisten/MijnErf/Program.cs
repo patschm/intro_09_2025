@@ -14,6 +14,9 @@ internal class Program
         Lamp lamp = new Lamp();
         Valkuil valkuil = new Valkuil();
 
+        lus.Connect(lamp);
+        lus.Connect(valkuil);
+        lus.Connect(hek);
 
         // En hier komt het tuig....
         lus.GaatAf(); // Hierachter dus ook niet

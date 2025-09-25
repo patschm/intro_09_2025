@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Philips", "Philips\Philips.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yunex", "Yunex\Yunex.csproj", "{DD837752-3D99-4B66-8CCA-E787902860B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Standards", "ClassLibrary1\Standards.csproj", "{1BB0C592-B2E0-42A4-936D-A1257D2A670E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DD837752-3D99-4B66-8CCA-E787902860B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD837752-3D99-4B66-8CCA-E787902860B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD837752-3D99-4B66-8CCA-E787902860B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB0C592-B2E0-42A4-936D-A1257D2A670E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB0C592-B2E0-42A4-936D-A1257D2A670E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB0C592-B2E0-42A4-936D-A1257D2A670E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB0C592-B2E0-42A4-936D-A1257D2A670E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

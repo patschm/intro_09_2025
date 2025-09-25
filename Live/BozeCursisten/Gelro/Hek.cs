@@ -1,9 +1,16 @@
-﻿namespace Gelro;
+﻿using Standards;
 
-public class Hek
+namespace Gelro;
+
+public class Hek : IDevice
 {
+    public void Activate()
+    {
+        Open();
+    }
+
     public void Open()
     {
-        Console.WriteLine("Het hel gaat open");
+        Console.WriteLine("Het hek gaat open");
     }
 }
