@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BouwTerrein", "BouwTerrein\BouwTerrein.csproj", "{885C9271-E772-4ADC-8E20-4A9AC0C7D8AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swappen", "Swappen\Swappen.csproj", "{9391F04E-4E17-490D-8F94-5B3CC0DF8FB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{885C9271-E772-4ADC-8E20-4A9AC0C7D8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{885C9271-E772-4ADC-8E20-4A9AC0C7D8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{885C9271-E772-4ADC-8E20-4A9AC0C7D8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9391F04E-4E17-490D-8F94-5B3CC0DF8FB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9391F04E-4E17-490D-8F94-5B3CC0DF8FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9391F04E-4E17-490D-8F94-5B3CC0DF8FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9391F04E-4E17-490D-8F94-5B3CC0DF8FB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
